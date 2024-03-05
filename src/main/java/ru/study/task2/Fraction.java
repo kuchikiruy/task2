@@ -1,12 +1,14 @@
 package ru.study.task2;
 
 interface Fractionable{
+    boolean isCached = false;
     double doubleValue();
     void setNum(int num) ;
     void setDenum(int denum) ;
 }
 
 public class Fraction implements Fractionable{
+    boolean isCached = false;
     private int num;
     private int denum;
 
