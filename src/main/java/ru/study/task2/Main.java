@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Fraction fraction= new Fraction(2,3);
 
+        //TODO попробоватоь засунуть все это в класс
         ClassLoader fractionClassLoader = fraction.getClass().getClassLoader();
         Class[] interfaces =fraction.getClass().getInterfaces();
         Fractionable proxyFraction = (Fractionable) Proxy.newProxyInstance(fractionClassLoader,interfaces,new FractionInvocationHendler(fraction));
